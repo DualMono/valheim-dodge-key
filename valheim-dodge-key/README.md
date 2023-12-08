@@ -1,14 +1,9 @@
 ﻿# DodgeKey
-Upon building for release, this README.md is copied into the `Package` folder for thunderstore packaging. Remember to also edit the manifest.json and supply your own mod icon.
+Press Left Alt to dodge. Key is configurable in the config file.
 
-## Installation (manual)
+## Installation
+- (Automatic) Install using [r2modman](https://thunderstore.io/package/ebkr/r2modman/).
+- (Manual) Donwload and extract the files to your `BepInEx/plugins` folder.
 
-
-## Features
-
-
-## Changelog
-
-
-## Known issues
-You can find the github at:
+## Source
+Source is available on [GitHub](https://github.com/DualMono/valheim-dodge-key)
