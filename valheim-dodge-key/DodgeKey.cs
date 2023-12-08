@@ -21,6 +21,8 @@ namespace DodgeKey
         private ConfigEntry<InputManager.GamepadButton> DodgeInputGamepad;
         private ButtonConfig DodgeButton;
 
+        private ConfigEntry<bool> InvertDodge;
+
         private void Awake()
         {
             CreateConfig();
@@ -47,7 +49,7 @@ namespace DodgeKey
                 }
                 else
                 {
-                    dodgeDir = -lookDir;
+                    dodgeDir = InvertDodge.Value ? -lookDir : lookDir;
                 }
                 Player.m_localPlayer.Dodge(dodgeDir);
             }
@@ -57,6 +59,7 @@ namespace DodgeKey
         {
             DodgeButtonKey = Config.Bind("General", "DodgeKey", KeyCode.LeftAlt, "Key to dodge");
             DodgeInputGamepad = Config.Bind("General", "DodgeInputGamepad", InputManager.GamepadButton.ButtonSouth, "Gamepad button to dodge");
+            InvertDodge = Config.Bind("General", "InvertDodge", true, "Invert dodge look direction");
         }
 
         private void AddInputs()
