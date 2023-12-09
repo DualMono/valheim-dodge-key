@@ -1,4 +1,4 @@
-﻿# DodgeKey
+# DodgeKey
 Press Left Alt to dodge. Key is configurable in the config file.
 
 ## Installation
